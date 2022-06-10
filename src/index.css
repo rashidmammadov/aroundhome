@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.company-container {
+    margin: auto;
+}
+
+.company {
+    border: 1px solid silver;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 200px;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.company
+.company-name, .reservation, .selected-slot {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.company .company-name {
+    color: cornflowerblue;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+
+.slots {
+    border: 1px solid silver;
+    border-radius: 4px;
+    padding: 16px;
+    width: 200px;
+    height: 300px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.day-name {
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.slot-selector {
+    border: 1px solid silver;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 4px auto;
+    width: fit-content;
+}
+
+.slot-selector.selected {
+    border-color: cornflowerblue;
+    box-shadow: 0 0 4px 0 silver;
+    color: cornflowerblue;
+}
+
+.slot-selector.disabled {
+    background: silver;
+    cursor: default;
+    color: gray;
+}
+
+.warning {
+    border: 1px solid silver;
+    border-radius: 4px;
+    padding: 16px;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 96px);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px transparent;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 800px) {
+    .app {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
